@@ -16,7 +16,7 @@ function TextInputField({ setSubject }) {
         onChangeText={handleInputChange}
       />
       <View style={styles.buttonView}>
-        <Button mode="contained" onPress={() => setSubject(inputData)}>
+        <Button mode="outlined" onPress={() => setSubject(inputData)}>
           FOCUS
         </Button>
       </View>
@@ -32,6 +32,8 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     margin: 10,
+    backgroundColor:'#dabfe7ff',
+    borderRadius:5
   },
 });
 

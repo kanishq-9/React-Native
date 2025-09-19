@@ -95,7 +95,7 @@ const Timer = ({ subject, setSubject }) => {
 
       <View style={styles.ButtonView}>
         <Button
-          mode="contained"
+        mode='outlined'
           onPress={toggleTimer}
           style={
             isRunning
@@ -107,8 +107,8 @@ const Timer = ({ subject, setSubject }) => {
 
         {[5, 10, 15].map((sec) => (
           <Button
+          mode='outlined'
             key={sec}
-            mode="contained"
             onPress={() => addSeconds(sec)}
             style={styles.button}>
             {sec}s
@@ -117,8 +117,8 @@ const Timer = ({ subject, setSubject }) => {
 
         {[1, 5].map((sec) => (
           <Button
+          mode='outlined'
             key={sec}
-            mode="contained"
             onPress={() => addExtraSeconds(sec)}
             style={styles.button}>
             +{sec}s
@@ -126,13 +126,13 @@ const Timer = ({ subject, setSubject }) => {
         ))}
 
         <Button
-          mode="contained"
+        mode='outlined'
           onPress={resetTimer}
           style={[styles.button, styles.clear]}>
           Clear
         </Button>
         <Button
-          mode="contained"
+        mode='outlined'
           onPress={()=>setSubject(null)}
           style={[styles.button,styles.back]}>
           Back
@@ -197,6 +197,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 80,
     overflow: 'hidden',
+    backgroundColor:'#dabfe7ff',
   },
   clear: {
     backgroundColor: 'red',
